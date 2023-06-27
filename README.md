@@ -25,7 +25,7 @@
 
 <p align="justify">
 
--  Para visitar o site basta clicar <a href="https://github.com/PhilipeMuzzi/novo-catu" target="_blank">AQUI</a>
+-  Para visitar o site basta clicar <a href="https://philipemuzzi.github.io/novo-catu/" target="_blank">AQUI</a>
 
 
 </p>
