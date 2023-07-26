@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resumo de Pedido</title>
+    <link rel="stylesheet" href="index.html">
+    <link rel="stylesheet" href="public/sass/style.css">
+    <link rel="stylesheet" href="public/sass/style.scss">
+    <link rel="stylesheet" href="public/js/main.js">
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding-bottom: 10px;
+            background-image: url(public/sass/casey-horner-4rDCa5hBlCs-unsplash.jpg);
+        }
+
+        .card {
+            animation-delay: 5ms;
+            padding: 20px;
+            padding-top: -30px;
+            border-radius: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: #ffffff;
+            width: 700px;
+            height: 520px;
+            text-align: center;
+            position: absolute;
+            display: flex;
+        }
+
+        h1 {
+            color: #008000;
+        }
+
+        form {
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-weight: bold;
+            border-radius: 20px;
+        }
+
+        button {
+            background-color: #008000;
+            box-shadow: 6px 6px 5px 0px rgba(20,51,0,1);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #4f614f;
+        }
+
+        #orderSummary {
+            background-color: #1cad1c;
+            box-shadow: 10px 6px 5px 0px rgba(20,51,0,1);
+            padding: 20px;
+            margin-left: 100px;
+            border-radius: 10px;
+            color: white;
+        }
+
+        #orderList {
+            list-style: none;
+            padding: 0;
+        }
+
+        #orderList li {
+            margin-bottom: 5px;
+        }
+
+        #total {
+            font-weight: bold;
+            text-align: right;
+        }
+
+        label, .card {
+            font-size: 15px;
+            object-position: 100px;
+        }
+    </style>
+</head>
+<body> 
+    
+    <header class="primary-header" style="margin-bottom: 600px; inline-size: 139900%;">
+        <div class="left-part">
+            <img src="public/sass/4686098c6f2b4104b3bd3d373bf9826f-removebg-preview (1).png" alt="">
+            <div class="logo" style="color: aliceblue;">
+                <h1 class="logo"><span>Catu</span> Experiência</h1>
+            </div>
+        </div>
+        <div class="right-part">
+            <div class="navbar">
+                <ul>
+                    <li><a href="pacotes-reservas.html">Pacotes De Turismo</a></li>
+                    <li><a href="comidas-fotos-localidade.html">Feed De Notícias</a></li>
+                    <li><a href="artesanais.html">Produtos Artesanais</a></li>
+                    <li><a href="feed-de-noticias-empresa.html">Sobre</a></li>
+                    <li><a href="Login-Cadastro.html">Login E Cadastro</a></li>
+                </ul>
+                <div class="btn-group">
+                    <!-- Insira aqui o código do botão, pois a tag "<a>" está incompleta -->
+                </div>
+            </div>
+            <div class="ham-menu">
+                <div class="line line-1"></div>
+                <div class="line line-2"></div>
+                <div class="line line-3"></div>
+            </div>
+        </div>
+    </header>
+    
+    <div class="card" style="margin-left: 50px; float: right; font-size: 10px;">
+        <form id="orderForm" style="margin-bottom: -20px;">
+            <label for="item1">Pacote 1 - (R$ 10.50):</label>
+            <input type="number" name="item1" id="item1" min="0" value="0"><br>
+            <br>
+            <br>
+
+            <label for="item2">Pacote 2 - (R$ 12.75):</label>
+            <input type="number" name="item2" id="item2" min="0" value="0"><br>
+            <br>
+            <br>
+
+            <label for="item3">Pacote 3 - (R$ 12.75):</label>
+            <input type="number" name="item3" id="item3" min="0" value="0"><br>
+            <br>
+            <br>
+
+            <label for="item4">Pacote 4 - (R$ 12.75):</label>
+            <input type="number" name="item4" id="item4" min="0" value="0"><br>
+            <br>
+            <br>
+
+            <div class="card2">
+                <label for="item5">Pacote 5 - (R$ 12.75):</label>
+                <input type="number" name="item5" id="item5" min="0" value="0"><br>
+                <br>
+                <br>
+
+                <label for="item6">Pacote 6 - (R$ 12.75):</label>
+                <input type="number" name="item6" id="item6" min="0" value="0"><br>
+                <br>
+                <br>
+
+                <label for="item7">Pacote 7 - (R$ 12.75):</label>
+                <input type="number" name="item7" id="item7" min="0" value="0"><br>
+                <br>
+                <br>
+
+                <label for="item8">Pacote 8 - (R$ 12.75):</label>
+                <input type="number" name="item8" id="item8" min="0" value="0"><br>
+                <br>
+                <br>
+            </div>
+
+            <button type="button" onclick="calculateTotal()">Calcular Total</button>
+        </form>
+
+        <div id="orderSummary">
+            <h2 style="font-size: 30px;">Resumo do Pedido</h2>
+            <ul id="orderList"></ul> <br> <br> <br> <br> <br> <br> <br> <br> <br>
+            <p id="total" style="font-size: 20px; font-family: sans-serif; margin-left: 40px; position: absolute;">Total: R$ 0.00</p>
+        </div>
+    </div>
+
+    <script>
+        function calculateTotal() {
+            const item1Qty = parseInt(document.getElementById('item1').value) || 0;
+            const item2Qty = parseInt(document.getElementById('item2').value) || 0;
+            const item3Qty = parseInt(document.getElementById('item3').value) || 0;
+            const item4Qty = parseInt(document.getElementById('item4').value) || 0;
+            const item5Qty = parseInt(document.getElementById('item5').value) || 0;
+            const item6Qty = parseInt(document.getElementById('item6').value) || 0;
+            const item7Qty = parseInt(document.getElementById('item7').value) || 0;
+            const item8Qty = parseInt(document.getElementById('item8').value) || 0;
+
+            const item1Price = 10.50; // Preço do pacote 1
+            const item2Price = 12.75; // Preço do pacote 2
+
+            const total = item1Qty * item1Price + item2Qty * item2Price + item3Qty * item2Price +
+                item4Qty * item2Price + item5Qty * item2Price + item6Qty * item2Price +
+                item7Qty * item2Price + item8Qty * item2Price;
+
+            document.getElementById('total').textContent = `Total: R$ ${total.toFixed(2)}`;
+
+            updateOrderList(item1Qty, item2Qty, item3Qty, item4Qty, item5Qty, item6Qty, item7Qty, item8Qty);
+        }
+
+        function updateOrderList(...quantities) {
+            const orderList = document.getElementById('orderList');
+            orderList.innerHTML = ""; // Limpa a lista de itens
+
+            const itemPrices = [10.50, 12.75, 12.75, 12.75, 12.75, 12.75, 12.75, 12.75];
+
+            for (let i = 0; i < quantities.length; i++) {
+                const quantity = quantities[i];
+                if (quantity > 0) {
+                    const itemName = `Pacote ${i + 1}`;
+                    const itemTotal = (quantity * itemPrices[i]).toFixed(2);
+                    addItemToOrderList(itemName, quantity, itemTotal);
+                }
+            }
+        }
+
+        function addItemToOrderList(itemName, quantity, total) {
+            const orderList = document.getElementById('orderList');
+            const listItem = document.createElement('li');
+            listItem.textContent = `${itemName} - Quantidade: ${quantity}, Total: R$ ${total}`;
+            orderList.appendChild(listItem);
+        }
+    </script>
+</body>
+</html>

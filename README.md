@@ -1,4 +1,4 @@
-# Katu Experiência💜 
+# Katu Experiência
 
 ### :rocket: Tecnologias
 

@@ -20,14 +20,17 @@
       margin: 0;
     }
 
+
+
     .primary-header {
-      background-color: #000000; /* Substitua pela cor desejada para o fundo do cabeçalho */
-      color: #fff; /* Substitua pela cor desejada para o texto do cabeçalho */
-      display: flex;
+      background-color: #000000; 
+      color: #fff; 
       justify-content: space-between;
       align-items: center;
       padding: 10px 20px;
     }
+
+
 
     .navbar ul {
       list-style: none;
@@ -37,13 +40,15 @@
       padding: 0;
     }
 
+
+
     .navbar li {
       margin-right: 20px;
     }
 
     .navbar a {
       text-decoration: none;
-      color: #fff; /* Substitua pela cor desejada para os links do menu */
+      color: #fff; 
     }
 
     .container {
@@ -53,8 +58,9 @@
       padding: 20px;
       border-radius: 10px;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      margin: 100px auto; /* Ajuste o valor '100px' conforme necessário para centralizar verticalmente */
+      margin: 100px auto; 
     }
+
 
     input {
       width: 100%;
@@ -62,6 +68,7 @@
       margin-bottom: 10px;
       box-sizing: border-box;
     }
+
 
     button {
       background-color: rgb(0, 0, 0);
@@ -72,6 +79,8 @@
     }
   </style>
 </head>
+
+
 
 <body>
   <header class="primary-header">
@@ -94,6 +103,9 @@
     </div>
   </header>
 
+
+
+
   <div class="container" id="loginContainer">
     <h2>Login</h2>
     <input type="email" placeholder="Email">
@@ -101,6 +113,8 @@
     <button onclick="login()"   style="background-color: rgb(0, 0, 0); border-radius: 10px; color: #ffffff;">Entrar</button>
     <button onclick="showRegistration()"   style="background-color: rgb(0, 0, 0); border-radius: 10px; color: #ffffff; font-size: 12px;">Não possui uma conta? Registre-se</button>
   </div>
+
+
 
   <div class="container" id="registrationContainer" style="display: none;">
     <h2>Cadastro</h2>
@@ -111,6 +125,8 @@
     <button onclick="register()"   style="background-color: rgb(0, 0, 0); border-radius: 10px; color: #ffffff; padding-bottom: -10px;">Cadastrar-se</button> <br>
     <button onclick="showLogin()"  style="background-color: rgb(0, 0, 0); border-radius: 10px; color: #ffffff; font-size: 12px;">Já possui uma conta? Faça login</button>
   </div>
+
+
 
   <script>
     function showRegistration() {
@@ -126,8 +142,7 @@
     function login() {
       const email = document.querySelector('#loginContainer input[type="email"]').value;
       const password = document.querySelector('#loginContainer input[type="password"]').value;
-      // Aqui você pode implementar a lógica de autenticação no servidor
-      // Por enquanto, vamos apenas mostrar um alerta com os dados inseridos
+      
       alert(`Login: ${email}\nSenha: ${password}`);
     }
 
@@ -143,8 +158,10 @@
         return;
       }
 
-      // Aqui você pode implementar a lógica de cadastro no servidor
-      // Por enquanto, vamos apenas mostrar um alerta com os dados inseridos
+
+
+      
+      
       alert(`Nome: ${name}\nEmail: ${email}\nSenha: ${password}`);
     }
   </script>
