@@ -58,24 +58,7 @@ li{
 }
 
 
-// common classes 
-#preloadder{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    background-color: $tc;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-image: url(../images/preloadder/loader.gif);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 35%;
-    z-index: 99999;
-}
+
 
 .btn{
     color: $tc;
