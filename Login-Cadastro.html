@@ -1,185 +1,152 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-    <link rel="stylesheet" href="index.html">
-    <link rel="stylesheet" href="public/sass/style.css">
-    <link rel="stylesheet" href="public/sass/style.scss">
-    <link rel="stylesheet" href="public/js/main.js">
-    <title>Login E Cadastro</title>
-
-
-<header class="primary-header">
-    <div class="left-part">
-        <img src="public/sass/4686098c6f2b4104b3bd3d373bf9826f-removebg-preview (1).png" alt="">
-        <div class="logo" style="color: aliceblue;">
-            <h1><span><a href="link-parte-foto.html"></a>Katu</span> Experiência</h1></a>
-        </div>
-    </div>
-    <div class="right-part">
-        <div class="navbar">
-            <ul>
-                <li><a href="pacotes-reservas.html">Pacotes De Turismo</a></li>
-                <li><a href="comidas-fotos-localidade.html">Feed De Notícias</a></li>
-                <li><a href="artesanais.html">Produtos Artesanais</a></li>
-                <li><a href="feed-de-noticias-empresa.html">Sobre</a></li>
-                <li><a href="Login-Cadastro.html">Login E Cadastro</a></li>
-               
-            </ul>
-            <div class="btn-group">
-               
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M13 5l7 7-7 7M5 5l7 7-7 7" />
-                    
-                </a>
-            </div>
-        </div>
-        <div class="ham-menu">
-            <div class="line line-1"></div>
-            <div class="line line-2"></div>
-            <div class="line line-3"></div>
-        </div>
-    </div>
-</header>
-
-
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Catu Experiência - Login e Cadastro</title>
-    <link rel="shortcut icon" href="" type="image/x-icon">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@800&family=Poppins:wght@400;500;600;700&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="public/sass/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login e Cadastro</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap">
+  <link rel="stylesheet" href="public/sass/style.css">
+  <link rel="stylesheet" href="public/sass/style.scss">
+  <link rel="stylesheet" href="public/js/main.js">
+  <link rel="shortcut icon" href="" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@800&family=Poppins:wght@400;500;600;700&display=swap"rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: white;
+      color: rgb(0, 0, 0);
+      margin: 0;
+    }
 
-    <style>
-        body {
-            font-family: 'Poppins', sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            background-image: url(public/sass/casey-horner-4rDCa5hBlCs-unsplash.jpg);
-        }
+    .primary-header {
+      background-color: #000000; /* Substitua pela cor desejada para o fundo do cabeçalho */
+      color: #fff; /* Substitua pela cor desejada para o texto do cabeçalho */
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+    }
 
-        header {
-            background-color: #4CAF50; /* Verde principal */
-            color: #fff;
-            padding: 20px;
-            text-align: center;
-        }
+    .navbar ul {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      margin: 0;
+      padding: 0;
+    }
 
-        .container {
-            max-width: 400px;
-            margin: 50px auto;
-            padding: 20px;
-            border: 1px solid #4CAF50; /* Verde principal */
-            border-radius: 8px;
-            background-color: #fff;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Sombra */
-        }
+    .navbar li {
+      margin-right: 20px;
+    }
 
-        input {
-            width: 100%;
-            padding: 10px;
-            margin: 5px 0;
-            border: 1px solid #6d8858; /* Verde principal */
-            border-radius: 5px;
-            font-size: 16px;
-        }
+    .navbar a {
+      text-decoration: none;
+      color: #fff; /* Substitua pela cor desejada para os links do menu */
+    }
 
-        button {
-            width: 100%;
-            padding: 10px;
-            background-color: #6d8858; /* Verde principal */
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 16px;
-            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); /* Sombra */
-        }
+    .container {
+      text-align: center;
+      max-width: 300px;
+      border: 2px solid black;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      margin: 100px auto; /* Ajuste o valor '100px' conforme necessário para centralizar verticalmente */
+    }
 
-        button:hover {
-            background-color: #156800; /* Verde escuro ao passar o mouse */
-        }
+    input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      box-sizing: border-box;
+    }
 
-        .login-form {
-            display: none;
-        }
-
-        .active-form {
-            display: block;
-        }
-
-        .tabs {
-            display: flex;
-            justify-content: center;
-            margin-bottom: 20px;
-        }
-
-        .tab {
-            padding: 10px 20px;
-            cursor: pointer;
-            border: 1px solid #6d8858; /* Verde principal */
-            border-radius: 5px;
-            margin: 0 10px;
-            background-color: #6d8858;
-            color: #333;
-            font-weight: bold;
-            font-size: 16px;
-        }
-
-        .tab:hover {
-            background-color: #2d5804; /* Cinza claro ao passar o mouse */
-        }
-
-        .login-link {
-            text-align: center;
-            margin-top: 10px;
-            cursor: pointer;
-            color: #333;
-            font-size: 14px;
-        }
-
-        .login-link:hover {
-            text-decoration: underline;
-        }
-       
-    </style>
+    button {
+      background-color: rgb(0, 0, 0);
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+    }
+  </style>
 </head>
 
 <body>
-  
-
-    <div class="container">
-        <div class="tabs">
-            <div class="tab" onclick="showForm('login-form')">Login</div>
-            <div class="tab" onclick="showForm('register-form')">Cadastro</div>
-        </div>
-        <form class="login-form active-form">
-            <input type="text" placeholder="Email">
-            <input type="password" placeholder="Senha">
-            <button type="submit">Entrar</button>
-        </form>
-        <form class="register-form">
-            <input type="text" placeholder="Nome">
-            <input type="text" placeholder="Email">
-            <input type="password" placeholder="Senha">
-            <button type="submit">Cadastrar</button>
-        </form>
+  <header class="primary-header">
+    <div class="left-part">
+      <img src="public/sass/4686098c6f2b4104b3bd3d373bf9826f-removebg-preview (1).png" alt="">
+      <div class="logo" style="color: aliceblue;">
+        <h1><span>Katu</span> Experiência</h1>
+      </div>
     </div>
+    <div class="right-part">
+      <div class="navbar">
+        <ul>
+          <li><a href="pacotes-reservas.html">Pacotes De Turismo</a></li>
+          <li><a href="comidas-fotos-localidade.html">Feed De Notícias</a></li>
+          <li><a href="artesanais.html">Produtos Artesanais</a></li>
+          <li><a href="feed-de-noticias-empresa.html">Sobre</a></li>
+          <li><a href="Login-Cadastro.html">Login E Cadastro</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
 
-    <script>
-        function showForm(formName) {
-            const forms = document.querySelectorAll('.active-form');
-            forms.forEach(form => {
-                form.classList.remove('active-form');
-            });
+  <div class="container" id="loginContainer">
+    <h2>Login</h2>
+    <input type="email" placeholder="Email">
+    <input type="password" placeholder="Senha">
+    <button onclick="login()"   style="background-color: rgb(0, 0, 0); border-radius: 10px; color: #ffffff;">Entrar</button>
+    <button onclick="showRegistration()"   style="background-color: rgb(0, 0, 0); border-radius: 10px; color: #ffffff; font-size: 12px;">Não possui uma conta? Registre-se</button>
+  </div>
 
-            const selectedForm = document.querySelector(`.${formName}`);
-            selectedForm.classList.add('active-form');
-        }
-    </script>
+  <div class="container" id="registrationContainer" style="display: none;">
+    <h2>Cadastro</h2>
+    <input type="text" placeholder="Nome">
+    <input type="email" placeholder="Email">
+    <input type="password" placeholder="Senha">
+    <input type="password" placeholder="Confirmar Senha">
+    <button onclick="register()"   style="background-color: rgb(0, 0, 0); border-radius: 10px; color: #ffffff; padding-bottom: -10px;">Cadastrar-se</button> <br>
+    <button onclick="showLogin()"  style="background-color: rgb(0, 0, 0); border-radius: 10px; color: #ffffff; font-size: 12px;">Já possui uma conta? Faça login</button>
+  </div>
+
+  <script>
+    function showRegistration() {
+      document.getElementById('loginContainer').style.display = 'none';
+      document.getElementById('registrationContainer').style.display = 'block';
+    }
+
+    function showLogin() {
+      document.getElementById('loginContainer').style.display = 'block';
+      document.getElementById('registrationContainer').style.display = 'none';
+    }
+
+    function login() {
+      const email = document.querySelector('#loginContainer input[type="email"]').value;
+      const password = document.querySelector('#loginContainer input[type="password"]').value;
+      // Aqui você pode implementar a lógica de autenticação no servidor
+      // Por enquanto, vamos apenas mostrar um alerta com os dados inseridos
+      alert(`Login: ${email}\nSenha: ${password}`);
+    }
+
+    function register() {
+      const name = document.querySelector('#registrationContainer input[type="text"]').value;
+      const email = document.querySelector('#registrationContainer input[type="email"]').value;
+      const password = document.querySelector('#registrationContainer input[type="password"]').value;
+      const confirmPassword = document.querySelector('#registrationContainer input[placeholder="Confirmar Senha"]').value;
+      
+      // Verificar se a senha e a confirmação são iguais
+      if (password !== confirmPassword) {
+        alert("As senhas não coincidem. Por favor, insira novamente.");
+        return;
+      }
+
+      // Aqui você pode implementar a lógica de cadastro no servidor
+      // Por enquanto, vamos apenas mostrar um alerta com os dados inseridos
+      alert(`Nome: ${name}\nEmail: ${email}\nSenha: ${password}`);
+    }
+  </script>
 </body>
-
 </html>
