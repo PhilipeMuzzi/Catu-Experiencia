@@ -21,7 +21,7 @@
             padding-bottom: 10px;
             background-image: url(public/sass/casey-horner-4rDCa5hBlCs-unsplash.jpg);
         }
-
+        
         .card {
             animation-delay: 5ms;
             padding: 20px;
@@ -111,7 +111,7 @@
                     <li><a href="Login-Cadastro.html">Login E Cadastro</a></li>
                 </ul>
                 <div class="btn-group">
-                    <!-- Insira aqui o código do botão, pois a tag "<a>" está incompleta -->
+                   <!-- Já está funcionando!--> 
                 </div>
             </div>
             <div class="ham-menu">
@@ -121,7 +121,12 @@
             </div>
         </div>
     </header>
-    
+
+
+
+    <!-- Aqui adicionem os pacotes corretos, com o nome correto e preços corretos a serem calculados-->
+
+
     <div class="card" style="margin-left: 50px; float: right; font-size: 10px;">
         <form id="orderForm" style="margin-bottom: -20px;">
             <label for="item1">Pacote 1 - (R$ 10.50):</label>
@@ -175,6 +180,10 @@
             <p id="total" style="font-size: 20px; font-family: sans-serif; margin-left: 40px; position: absolute;">Total: R$ 0.00</p>
         </div>
     </div>
+
+
+<!-- Aqui é a lógica para o cálculo funcionar perfeitamente-->
+
 
     <script>
         function calculateTotal() {
