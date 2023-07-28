@@ -168,64 +168,186 @@
         </div>
     </header>
 
-    <div class="card" style="font-size: 20px; padding-top: 10px; margin-top: 50px;">
-        <form id="orderForm">
-            <br>
-            <label>Pacote 1 - (R$ 10.50):</label>
-            <button type="button" onclick="changeQuantity(0, -1)">-</button>
-            <span id="item1Qty">0</span>
-            <button type="button" onclick="changeQuantity(0, 1)">+</button><br>
-    
-            <label>Pacote 2 - (R$ 12.75):</label>
-            <button type="button" onclick="changeQuantity(1, -1)">-</button>
-            <span id="item2Qty">0</span>
-            <button type="button" onclick="changeQuantity(1, 1)">+</button><br>
-    
-            <label>Pacote 3 - (R$ 12.75):</label>
-            <button type="button" onclick="changeQuantity(2, -1)">-</button>
-            <span id="item3Qty">0</span>
-            <button type="button" onclick="changeQuantity(2, 1)">+</button><br>
-    
-            <label>Pacote 4 - (R$ 12.75):</label>
-            <button type="button" onclick="changeQuantity(3, -1)">-</button>
-            <span id="item4Qty">0</span>
-            <button type="button" onclick="changeQuantity(3, 1)">+</button><br>
-    
-            <div class="card2">
-                <label>Pacote 5 - (R$ 12.75):</label>
-                <button type="button" onclick="changeQuantity(4, -1)">-</button>
-                <span id="item5Qty">0</span>
-                <button type="button" onclick="changeQuantity(4, 1)">+</button><br>
-    
-                <label>Pacote 6 - (R$ 12.75):</label>
-                <button type="button" onclick="changeQuantity(5, -1)">-</button>
-                <span id="item6Qty">0</span>
-                <button type="button" onclick="changeQuantity(5, 1)">+</button><br>
-    
-                <label>Pacote 7 - (R$ 12.75):</label>
-                <button type="button" onclick="changeQuantity(6, -1)">-</button>
-                <span id="item7Qty">0</span>
-                <button type="button" onclick="changeQuantity(6, 1)">+</button><br>
-    
-                <label>Pacote 8 - (R$ 12.75):</label>
-                <button type="button" onclick="changeQuantity(7, -1)">-</button>
-                <span id="item8Qty">0</span>
-                <button type="button" onclick="changeQuantity(7, 1)">+</button><br>
-    
-                
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f2f2f2;
+            margin: 0;
+        }
+
+        .container {
+            width: 600px;
+            height: 550px;
+            margin: 50px auto;
+            padding: 20px;
+            margin-bottom: -20px;
+            margin-left: 19%;
+            padding-bottom: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+
+        }
+
+        .package {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .package label {
+            flex: 1;
+            font-size: 18px;
+        }
+
+        .package button {
+            padding: 8px 12px;
+            font-size: 18px;
+            background-color: #f2f2f2;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .order-summary {
+            background-color: #f2f2f2;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .order-summary h2 {
+            margin-top: 0;
+            font-size: 24px;
+        }
+
+        .order-summary ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .order-summary li {
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+
+        .order-summary p {
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 10px;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="container">                         <!--OS PREÇOS SÃO ALEATÓRIOS PARA FINS DE TESTE-->
+        <div class="order">
+            <div class="package">
+                <label>Pacote 1 - (R$ 10.50):</label>
+                <div>
+                    <button type="button" onclick="changeQuantity(0, -1)">-</button>
+                    <span id="item1Qty">0</span>
+                    <button type="button" onclick="changeQuantity(0, 1)">+</button>
+                </div>
             </div>
-            <br>
-        </form>
     
-        <div id="orderSummary">
-            <h2>Resumo do Pedido</h2>
+            <div class="package">
+                <label>Pacote 2 - (R$ 12.75):</label>
+                <div>
+                    <button type="button" onclick="changeQuantity(1, -1)">-</button>
+                    <span id="item2Qty">0</span>
+                    <button type="button" onclick="changeQuantity(1, 1)">+</button>
+                </div>
+            </div>                                                               <!--OS PREÇOS SÃO ALEATÓRIOS PARA FINS DE TESTE-->
+    
+            <div class="package">
+                <label>Pacote 3 - (R$ 12.75):</label>
+                <div>
+                    <button type="button" onclick="changeQuantity(2, -1)">-</button>
+                    <span id="item3Qty">0</span>
+                    <button type="button" onclick="changeQuantity(2, 1)">+</button>
+                </div>
+            </div>
+    
+            <div class="package">
+                <label>Pacote 4 - (R$ 12.75):</label>
+                <div>
+                    <button type="button" onclick="changeQuantity(3, -1)">-</button>
+                    <span id="item4Qty">0</span>
+                    <button type="button" onclick="changeQuantity(3, 1)">+</button>
+                </div>
+            </div>
+                                                             <!--OS PREÇOS SÃO ALEATÓRIOS PARA FINS DE TESTE-->
+            <div class="package">
+                <label>Pacote 5 - (R$ 12.75):</label>
+                <div>
+                    <button type="button" onclick="changeQuantity(4, -1)">-</button>
+                    <span id="item5Qty">0</span>
+                    <button type="button" onclick="changeQuantity(4, 1)">+</button>
+                </div>
+            </div>
+    
+            <div class="package">
+                <label>Pacote 6 - (R$ 15.00):</label>
+                <div>
+                    <button type="button" onclick="changeQuantity(5, -1)">-</button>
+                    <span id="item6Qty">0</span>
+                    <button type="button" onclick="changeQuantity(5, 1)">+</button>
+                </div>
+            </div>
+    
+            <div class="package">
+                <label>Pacote 7 - (R$ 9.99):</label>
+                <div>
+                    <button type="button" onclick="changeQuantity(6, -1)">-</button>
+                    <span id="item7Qty">0</span>
+                    <button type="button" onclick="changeQuantity(6, 1)">+</button>
+                </div>
+            </div>
+    
+            <div class="package">                                <!--OS PREÇOS SÃO ALEATÓRIOS PARA FINS DE TESTE-->
+                <label>Pacote 8 - (R$ 11.25):</label>
+                <div>
+                    <button type="button" onclick="changeQuantity(7, -1)">-</button>
+                    <span id="item8Qty">0</span>
+                    <button type="button" onclick="changeQuantity(7, 1)">+</button>
+                </div>
+            </div>
+    
+            <div class="package">
+                <label>Pacote 9 - (R$ 8.50):</label>
+                <div>
+                    <button type="button" onclick="changeQuantity(8, -1)">-</button>
+                    <span id="item9Qty">0</span>
+                    <button type="button" onclick="changeQuantity(8, 1)">+</button>
+                </div>
+            </div>
+                                                         <!--OS PREÇOS SÃO ALEATÓRIOS PARA FINS DE TESTE-->
+            <div class="package">
+                <label>Pacote 10 - (R$ 14.50):</label>
+                <div>
+                    <button type="button" onclick="changeQuantity(9, -1)">-</button>
+                    <span id="item10Qty">0</span>
+                    <button type="button" onclick="changeQuantity(9, 1)">+</button>
+                </div>
+            </div>
+        </div>
+    
+        <div class="order-summary" style=" position: absolute; margin-top: -560px; margin-left: 600px; padding-bottom: 50px;">
+            <h2>Resumo do Pedido </h2>
             <ul id="orderList"></ul>
-            <p id="total">Total: R$ 0.00</p>
+            
+            <p id="total" style="margin-bottom: 0; position: absolute;">Total: R$ 0.00</p>
         </div>
     </div>
     
     <script>
-        const itemPrices = [10.50, 12.75, 12.75, 12.75, 12.75, 12.75, 12.75, 12.75, 15.00, 18.25];
+        const itemPrices = [10.50, 12.75, 12.75, 12.75, 12.75, 15.00, 9.99, 11.25, 8.50, 14.50];
         let quantities = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
     
         function changeQuantity(itemIndex, delta) {
@@ -272,3 +394,4 @@
     
 </body>
 </html>
+
