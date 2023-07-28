@@ -15,16 +15,19 @@
             margin: 0;
             padding: 0;
         }
-
-        body {
-            font-family: 'Poppins', Arial, sans-serif;
+            *{
+                font-family: 'Poppins', sans-serif;
+            }
+        
+        body {               
+            font-family: 'Poppins', sans-serif;
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
             margin: 0;
             padding-bottom: 10px;
-            background-image: url(public/sass/casey-horner-4rDCa5hBlCs-unsplash.jpg);
+            background-color: #007000;
             background-size: cover;
         }
 
@@ -328,14 +331,7 @@
                 </div>
             </div>
                                                          <!--OS PREÇOS SÃO ALEATÓRIOS PARA FINS DE TESTE-->
-            <div class="package">
-                <label>Pacote 10 - (R$ 14.50):</label>
-                <div>
-                    <button type="button" onclick="changeQuantity(9, -1)">-</button>
-                    <span id="item10Qty">0</span>
-                    <button type="button" onclick="changeQuantity(9, 1)">+</button>
-                </div>
-            </div>
+            
         </div>
     
         <div class="order-summary" style=" position: absolute; margin-top: -560px; margin-left: 600px; padding-bottom: 50px;">
