@@ -32,7 +32,7 @@ html {
 
 body {
   font-family: "Poppins", sans-serif;
-  background-color:  hsl(198deg, 100%, 6%);
+  background-color:  hsl(0, 0%, 0%);
 }
 
 a, a:visited, a:active {
@@ -443,6 +443,7 @@ li {
   display: grid;
   grid-template-columns: 1fr;
   gap: 2rem;
+
 }
 .tour .main-container .tour-cards .image-box {
   border-radius: 5px;
@@ -469,7 +470,7 @@ li {
   transition: all 350ms ease-in-out;
 }
 .tour .main-container .tour-cards-text h1:hover {
-  color: hsl(167deg, 82%, 65%);
+  color: hsl(130, 100%, 18%);
 }
 .tour .main-container .tour-cards-text p {
   cursor: pointer;
@@ -553,14 +554,14 @@ li {
   font-size: 4rem;
 }
 .sale .heading h1:hover {
-  color: hsl(167deg, 82%, 65%);
+  color: hsl(145, 100%, 14%);
 }
 .sale .heading h2 {
   font-size: 1.6rem;
   text-transform: uppercase;
   padding: 0.5rem 1rem;
   background-color: hsl(198deg, 100%, 6%);
-  color: hsl(167deg, 82%, 65%);
+  color: hsl(123, 86%, 14%);
   border-radius: 50px;
 }
 .sale .info {
@@ -673,7 +674,7 @@ li {
   padding: 1rem 4rem;
   border: none;
   cursor: pointer;
-  background-color: hsl(167deg, 82%, 65%);
+
   color: hsl(0, 100%, 6%);
   font-weight: 700;
   font-size: 1.6rem;
@@ -701,22 +702,11 @@ li {
   color: hsl(167deg, 82%, 65%);
   resize: none;
 }
-.contact .main-container .phone input::-moz-placeholder, .contact .main-container .phone textarea::-moz-placeholder, .contact .main-container .name input::-moz-placeholder, .contact .main-container .name textarea::-moz-placeholder, .contact .main-container .message input::-moz-placeholder, .contact .main-container .message textarea::-moz-placeholder {
-  color: hsl(0deg, 0%, 100%);
-  opacity: 70%;
-}
-.contact .main-container .phone input:-ms-input-placeholder, .contact .main-container .phone textarea:-ms-input-placeholder, .contact .main-container .name input:-ms-input-placeholder, .contact .main-container .name textarea:-ms-input-placeholder, .contact .main-container .message input:-ms-input-placeholder, .contact .main-container .message textarea:-ms-input-placeholder {
-  color: hsl(0deg, 0%, 100%);
-  opacity: 70%;
-}
-.contact .main-container .phone input::placeholder, .contact .main-container .phone textarea::placeholder, .contact .main-container .name input::placeholder, .contact .main-container .name textarea::placeholder, .contact .main-container .message input::placeholder, .contact .main-container .message textarea::placeholder {
-  color: hsl(0deg, 0%, 100%);
-  opacity: 70%;
-}
+
 
 footer {
   margin: 5rem auto 0rem auto;
-  background-color: hsl(0deg, 0%, 3%);
+  background-color: hsl(114, 94%, 6%);
 }
 footer .footer-image {
   
@@ -760,7 +750,7 @@ footer .main-container h1::after {
   left: 1.4rem;
   width: 28px;
   height: 0.4rem;
-  background-color: hsl(167deg, 82%, 65%);
+  background-color: hsl(118, 100%, 6%);
   border-radius: 8px;
   opacity: 80%;
 }
@@ -771,7 +761,7 @@ footer .main-container h1::before {
   left: 0;
   width: 0.8rem;
   height: 0.4rem;
-  background-color: hsl(167deg, 82%, 65%);
+  background-color: hsl(138, 100%, 11%);
   border-radius: 8px;
   opacity: 80%;
 }
